@@ -1,0 +1,70 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #00030a;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    animation: showText 3s ease forwards;
+    animation-delay: 3s;
+    pointer-events: none;
+    width: 100%;
+}
+
+.center-message h1 {
+    color: #d9f5ff;
+    font-size: clamp(25px, 7vw, 55px);
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 20px #0088ff,
+        0 0 45px #0066ff;
+}
+
+.center-message p {
+    color: #49bfff;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 12px;
+}
+
+.signature {
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    color: #168bff;
+    font-size: 10px;
+    letter-spacing: 5px;
+    opacity: .7;
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
